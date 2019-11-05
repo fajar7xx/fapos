@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('templates');
+$autoload['libraries'] = array('templates', 'database', 'session');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +89,9 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url');
+// jika punya fungsi custom silahkan buat d folder fungsi dengan nama fungsi_helper
+// tapi pemanggilannya cungkup fungsi ja
+$autoload['helper'] = array('url', 'fungsi');
 
 /*
 | -------------------------------------------------------------------

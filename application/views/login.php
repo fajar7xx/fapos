@@ -37,7 +37,7 @@
         <div class="card ">
             <div class="card-header text-center"><a href="#"><h2 class="text-primary">FAPOS</h2><span class="splash-description">Please enter your user information.</span></div>
             <div class="card-body">
-                <form>
+                <form action="<?=site_url('auth/process');?>" method="post">
                     <div class="form-group">
                         <input class="form-control form-control-lg" id="username" name="username" type="text" placeholder="Username" autocomplete="off">
                     </div>
@@ -49,7 +49,7 @@
                             <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
                         </label>
                     </div> -->
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block">Sign in</button>
                 </form>
             </div>
             <div class="card-footer bg-white p-0  text-center">

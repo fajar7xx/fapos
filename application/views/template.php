@@ -120,7 +120,7 @@
 								</div>
 								<a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
 								<a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-								<a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+								<a class="dropdown-item" href="<?=site_url('auth/logout');?>"><i class="fas fa-power-off mr-2"></i>Logout</a>
 							</div>
 						</li>
 					</ul>
@@ -206,6 +206,8 @@
 									</ul>
 								</div>
 							</li>
+
+							<?php if($this->session->userdata('level') == 1): ?>
 							<li class="nav-divider">
 								Settings
 							</li>
@@ -214,14 +216,16 @@
 								<a class="nav-link" href="#"><i class="fas fa-fw fa-user"></i></i>Users </a>
 
 							</li>
+							<?php endif; ?>
 							<div class="nav-divider"></div>
-							<a href="" class="btn btn-brand text-white"> <i
+							<a href="<?=site_url('auth/logout');?>" class="btn btn-brand text-white"> <i
 									class="fas fa-fw fa-power-off mr-2"></i>Logout</a>
 						</ul>
 					</div>
 				</nav>
 			</div>
 		</div>
+
 		<!-- ============================================================== -->
 		<!-- end left sidebar -->
 		<!-- ============================================================== -->
@@ -232,6 +236,8 @@
 		<!-- ============================================================== -->
 		<!-- end wrapper  -->
 		<!-- ============================================================== -->
+
+
 	</div>
 	<!-- ============================================================== -->
 	<!-- end main wrapper  -->
