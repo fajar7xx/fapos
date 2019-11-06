@@ -1,16 +1,17 @@
 kumpulkan link video tutorial yuk koding progress :
     link nya https://www.youtube.com/watch?v=-7awzH-4ysc&list=PLTagRbmJ8etsYolfn4DTCg8I6rfDivklc&index=2
 
-    ✔ video 1 @done (10/31/2019, 10:43:53 PM)
-    ✔ video 2 intro @done (10/31/2019, 10:44:40 PM)
-    ✔ video 3 desain layout dashboard dan login responsive @done (11/3/2019, 1:07:50 PM)
-    ✔ video 4 templating dan page dinamis di CI3 @done (11/3/2019, 1:26:53 PM)
-    ✔ video 5 create multilevel user login @done (11/5/2019, 9:58:52 PM)
-    ✔ video 6 has akses user terlogin @done (11/6/2019, 6:15:48 AM)
-    ☐ video 7
-    ☐ video 8
-    ☐ video 9
-    ☐ video 10
+    ✔ video 0 @done (10/31/2019, 10:43:53 PM)
+    ✔ video 1 intro @done (10/31/2019, 10:44:40 PM)
+    ✔ video 2 desain layout dashboard dan login responsive @done (11/3/2019, 1:07:50 PM)
+    ✔ video 3 templating dan page dinamis di CI3 @done (11/3/2019, 1:26:53 PM)
+    ✔ video 4 create multilevel user login @done (11/5/2019, 9:58:52 PM)
+    ✔ video 5 has akses user terlogin @done (11/6/2019, 6:15:48 AM)
+    ✔ video 6  menampilkan data user sesuai ID SESSION @done (11/6/2019, 10:52:33 AM)
+    ✔ video 7 perbedaan library dan helper pada CI @done (11/6/2019, 10:52:34 AM)
+    ✔ video 8 list all users data from database in codeigniter @done (11/6/2019, 11:35:38 AM)
+    ✔ video 9 Add User Data + Form Validation Implementation @done (11/6/2019, 12:42:01 PM)
+    ✔ video 10 Kupas Tuntas Form Validation di CodeIgniter @done (11/6/2019, 1:05:27 PM)
     ☐ video 11
     ☐ video 12
     ☐ video 13
@@ -44,3 +45,8 @@ kumpulkan link video tutorial yuk koding progress :
         result di ekstrak semuanya
     
     perbedaan library dan helper pada codeigniter adalaj
+    helper hanyalah fungsi biasa tanpa ada kelas seperti biasanya, jika usdah di load pada autolaod->lobarires cukup panggil fungsinay saja maka sudah jalan deh
+
+    library hampir sama dengan controller dan model jadi pemanggilan harus sama dalam bentuk objek  dan tanpa menggunakan extends ci 
+
+    pelajari lebih lanjut penggunaan Libraries dan helpers
