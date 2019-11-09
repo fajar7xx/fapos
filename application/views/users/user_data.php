@@ -59,10 +59,15 @@
                                                     <td><?= $data->username; ?></td>
                                                     <td><?= $data->name; ?></td>
                                                     <td><?= $data->address; ?></td>
-                                                    <td><?= $data->level == 1 ? '<span class="badge badge-primary">Admin</span>' : '<span class="badge badge-info">Kasir</span>'; ?></td>
+                                                    <td><?= $data->level == 1 ? '<span class="badge badge-primary">Admin</span>' : '<span class="badge badge-info">Kasir</span>'; ?>
+                                                    </td>
                                                     <td class="text-center">
-                                                        <a href="" class="btn btn-rounded btn-success btn-xs">Edit</a>
-                                                        <a href="" class="btn btn-rounded btn-danger btn-xs">Hapus</a>
+                                                        <form method="post" action="<?= site_url('users/delete'); ?>">
+                                                            <a href="<?= site_url('users/edit/' . $data->user_id); ?>" class="btn btn-rounded btn-success btn-xs">Edit</a>
+                                                            <input type="hidden" name="id" value="<?= $data->user_id; ?>">
+                                                            <button type="submit" class="btn btn-rounded btn-danger btn-xs" onclick="return confirm('apakah anda yakin ?')">Hapus</button>
+                                                        </form>
+
                                                     </td>
                                                 </tr>
                                             <?php

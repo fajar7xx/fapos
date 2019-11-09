@@ -61,4 +61,15 @@ class Users extends CI_Controller
 			echo "<script>window.location='" . site_url('users') . "'</script>";
 		}
 	}
+
+	public function delete()
+	{
+		$id = $this->input->post('id');
+		$this->Users_model->deleteUser($id);
+
+		if ($this->db->affected_rows() > 0) {
+			echo "<script>alert('data berhasil dihapus')</script>";
+		}
+		echo "<script>window.location='" . site_url('users') . "'</script>";
+	}
 }

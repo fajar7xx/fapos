@@ -39,4 +39,10 @@ class Users_model extends CI_Model
 
         $this->db->insert('users', $data);
     }
+
+    public function deleteUser($id)
+    {
+        $this->db->where('user_id', $id)
+            ->delete('users');
+    }
 }
