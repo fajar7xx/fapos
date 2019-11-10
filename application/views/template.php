@@ -183,7 +183,7 @@
 								</div>
 							</li>
 
-							<?php if ($this->session->userdata('level') == 1) : ?>
+							<?php if ($this->fungsi->user_login()->level == 1) : ?>
 								<li class="nav-divider">
 									Settings
 								</li>

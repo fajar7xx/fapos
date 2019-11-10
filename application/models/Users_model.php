@@ -40,6 +40,25 @@ class Users_model extends CI_Model
         $this->db->insert('users', $data);
     }
 
+    public function updateUser($post)
+    {
+        $data = [
+            'name' => $post['fullname'],
+            'username' => $post['username'],
+            'address' => $post['address'] != ""  ? $post['address'] : NULL,
+            'level' => $post['level']
+        ];
+        if (!empty($post['password'])) {
+            $data['password'] = sha1($post['password']);
+            $data['pass_origin'] = $post['password'];
+        };
+
+
+        $this->db
+            ->where('user_id', $post['user_id'])
+            ->update('users', $data);
+    }
+
     public function deleteUser($id)
     {
         $this->db->where('user_id', $id)

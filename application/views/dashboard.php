@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="page-header">
-						<h2 class="pageheader-title">E-commerce Dashboard Template </h2>
+						<h2 class="pageheader-title">FAPOS Dashboard </h2>
 
 						<hr>
 					</div>
@@ -109,8 +109,7 @@
 											<tr>
 												<td>1</td>
 												<td>
-													<div class="m-r-10"><img src="assets/images/product-pic.jpg"
-															alt="user" class="rounded" width="45"></div>
+													<div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
 												</td>
 												<td>Product #1 </td>
 												<td>id000001 </td>
@@ -124,8 +123,7 @@
 											<tr>
 												<td>2</td>
 												<td>
-													<div class="m-r-10"><img src="assets/images/product-pic-2.jpg"
-															alt="user" class="rounded" width="45"></div>
+													<div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
 												</td>
 												<td>Product #2 </td>
 												<td>id000002 </td>
@@ -139,8 +137,7 @@
 											<tr>
 												<td>3</td>
 												<td>
-													<div class="m-r-10"><img src="assets/images/product-pic-3.jpg"
-															alt="user" class="rounded" width="45"></div>
+													<div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
 												</td>
 												<td>Product #3 </td>
 												<td>id000003 </td>
@@ -154,8 +151,7 @@
 											<tr>
 												<td>4</td>
 												<td>
-													<div class="m-r-10"><img src="assets/images/product-pic-4.jpg"
-															alt="user" class="rounded" width="45"></div>
+													<div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
 												</td>
 												<td>Product #4 </td>
 												<td>id000004 </td>
@@ -167,8 +163,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td colspan="9"><a href="#"
-														class="btn btn-outline-light float-right">View
+												<td colspan="9"><a href="#" class="btn btn-outline-light float-right">View
 														Details</a></td>
 											</tr>
 										</tbody>
@@ -206,9 +201,7 @@
 								<div id="morris_totalrevenue"></div>
 							</div>
 							<div class="card-footer">
-								<p class="display-7 font-weight-bold"><span
-										class="text-primary d-inline-block">$26,000</span><span
-										class="text-success float-right">+9.45%</span></p>
+								<p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
 							</div>
 						</div>
 					</div>
