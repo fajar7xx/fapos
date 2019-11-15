@@ -135,7 +135,7 @@
 								<a class="nav-link" href="<?= site_url('suppliers'); ?>"><i class="fas fa-fw fa-truck"></i></i>Suppliers</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#"><i class="fas fa-fw fa-users"></i>Customers</a>
+								<a class="nav-link" href="<?= site_url('customers'); ?>"><i class="fas fa-fw fa-users"></i>Customers</a>
 							</li>
 							<li class="nav-item ">
 								<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-fw fa-folder-open"></i>Products</a>

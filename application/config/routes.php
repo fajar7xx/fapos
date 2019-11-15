@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -53,3 +53,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// custom touting untuk ci
+$route['customers'] = 'customers';
+$route['customers/add'] = 'customers/add';
+$route['customers/process'] = 'customers/process';
+$route['customers/edit/(:num)'] = 'customers/edit/$1';
+$route['customers/del/(:num)'] = 'customers/del/$1';
