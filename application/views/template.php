@@ -16,6 +16,11 @@
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/vendor/charts/c3charts/c3.css">
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+
+	<!-- datatables -->
+	<link rel="stylesheet" href="<?= base_url('node_modules/datatables.net-bs/css/dataTables.bootstrap.min.css'); ?>">
+
+
 	<title>FAPOS by Fajar Siagian</title>
 </head>
 
@@ -142,13 +147,13 @@
 								<div id="submenu-4" class="collapse submenu" style="">
 									<ul class="nav flex-column">
 										<li class="nav-item">
-											<a class="nav-link" href="#">Categories</a>
+											<a class="nav-link" href="<?= site_url('category'); ?>">Categories</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Units</a>
+											<a class="nav-link" href="<?= site_url('units'); ?>">Units</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Items</a>
+											<a class="nav-link" href="<?= site_url('items'); ?>">Items</a>
 										</li>
 									</ul>
 								</div>
@@ -238,7 +243,17 @@
 	<script src="<?= base_url('assets/'); ?>assets/vendor/charts/c3charts/c3.min.js"></script>
 	<script src="<?= base_url('assets/'); ?>assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
 	<script src="<?= base_url('assets/'); ?>assets/vendor/charts/c3charts/C3chartjs.js"></script>
-	<script src="<?= base_url('assets/'); ?>assets/libs/js/dashboard-ecommerce.js"></script>
+
+
+	<!-- datatables-->
+	<script src="<?= base_url('node_modules/datatables.net/js/jquery.dataTables.min.js'); ?>"></script>
+	<script src="<?= base_url('node_modules/datatables.net-bs/js/dataTables.bootstrap.min.js'); ?>"></script>
+	<script>
+		// datatablse inisialitation
+		$(document).ready(function() {
+			$('#dt-show').DataTable();
+		});
+	</script>
 </body>
 
 </html>
