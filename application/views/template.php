@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
 
 	<!-- datatables -->
-	<link rel="stylesheet" href="<?= base_url('node_modules/datatables.net-bs/css/dataTables.bootstrap.min.css'); ?>">
+	<link rel="stylesheet" href="<?= base_url('node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css'); ?>">
 
 
 	<title>FAPOS by Fajar Siagian</title>
@@ -133,17 +133,17 @@
 							<li class="nav-divider">
 								Menu
 							</li>
-							<li class="nav-item ">
-								<a class="nav-link" href="<?= site_url('dashboard'); ?>"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+							<li class="nav-item">
+								<a class="nav-link <?= $this->uri->segment(1) == 'dashboard' || $this->uri->segment(1) == '' ? 'active' : ''; ?>" href="<?= site_url('dashboard'); ?>"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="<?= site_url('suppliers'); ?>"><i class="fas fa-fw fa-truck"></i></i>Suppliers</a>
+								<a class="nav-link <?= $this->uri->segment(1) == 'suppliers' ? 'active' : ''; ?>" href="<?= site_url('suppliers'); ?>"><i class="fas fa-fw fa-truck"></i></i>Suppliers</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="<?= site_url('customers'); ?>"><i class="fas fa-fw fa-users"></i>Customers</a>
+								<a class="nav-link <?= $this->uri->segment(1) == 'customers' ? 'active' : ''; ?>" href="<?= site_url('customers'); ?>"><i class="fas fa-fw fa-users"></i>Customers</a>
 							</li>
 							<li class="nav-item ">
-								<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-fw fa-folder-open"></i>Products</a>
+								<a class="nav-link <?= $this->uri->segment(1) == 'category' || $this->uri->segment(1) == 'units' || $this->uri->segment(1) == 'items' ? 'active' : ''; ?>" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-fw fa-folder-open"></i>Products</a>
 								<div id="submenu-4" class="collapse submenu" style="">
 									<ul class="nav flex-column">
 										<li class="nav-item">
@@ -194,7 +194,7 @@
 								</li>
 
 								<li class="nav-item">
-									<a class="nav-link" href="<?= site_url('users'); ?>"><i class="fas fa-fw fa-user"></i></i>Users </a>
+									<a class="nav-link <?= $this->uri->segment(1) == 'users' ? 'active' : ''; ?>" href="<?= site_url('users'); ?>"><i class="fas fa-fw fa-user"></i></i>Users </a>
 
 
 								</li>
@@ -247,11 +247,11 @@
 
 	<!-- datatables-->
 	<script src="<?= base_url('node_modules/datatables.net/js/jquery.dataTables.min.js'); ?>"></script>
-	<script src="<?= base_url('node_modules/datatables.net-bs/js/dataTables.bootstrap.min.js'); ?>"></script>
+	<script src="<?= base_url('node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js'); ?>"></script>
 	<script>
 		// datatablse inisialitation
 		$(document).ready(function() {
-			$('#dt-show').DataTable();
+			$('table.table-show').DataTable();
 		});
 	</script>
 </body>

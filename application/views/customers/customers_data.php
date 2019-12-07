@@ -21,8 +21,8 @@
 						// debug apakah data bisa muncul atau tidak
 						// print_r($users->result()); 
 						?>
-						<div class="table-responsive">
-							<table class="table">
+						<div class="table-responsive p-2">
+							<table class="table table-show">
 								<thead class="bg-light">
 									<tr class="border-0">
 										<th class="border-0 text-center">#</th>
@@ -54,13 +54,9 @@
 
 											</td>
 										</tr>
-									<?php
-									endforeach;
-									?>
-									<tr>
-										<td colspan="9"><a href="#" class="btn btn-outline-light float-right">View
-												Details</a></td>
-									</tr>
+										<?php
+										endforeach;
+										?>S
 								</tbody>
 							</table>
 						</div>

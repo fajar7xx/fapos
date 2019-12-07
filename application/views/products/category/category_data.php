@@ -30,8 +30,8 @@
                         // debug apakah data bisa muncul atau tidak
                         // print_r($users->result()); 
                         ?>
-                        <div class="table-responsive">
-                            <table class="table" id="dt-show">
+                        <div class="table-responsive p-2">
+                            <table class="table table-show">
                                 <thead class="bg-light">
                                     <tr class="border-0">
                                         <th class="border-0 text-center">#</th>
