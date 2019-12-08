@@ -144,7 +144,7 @@
 							</li>
 							<li class="nav-item ">
 								<a class="nav-link <?= $this->uri->segment(1) == 'category' || $this->uri->segment(1) == 'units' || $this->uri->segment(1) == 'items' ? 'active' : ''; ?>" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-fw fa-folder-open"></i>Products</a>
-								<div id="submenu-4" class="collapse submenu" style="">
+								<div id="submenu-4" class="collapse submenu">
 									<ul class="nav flex-column">
 										<li class="nav-item">
 											<a class="nav-link" href="<?= site_url('category'); ?>">Categories</a>
@@ -160,7 +160,7 @@
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-shopping-cart"></i>Transactions</a>
-								<div id="submenu-5" class="collapse submenu" style="">
+								<div id="submenu-5" class="collapse submenu">
 									<ul class="nav flex-column">
 										<li class="nav-item">
 											<a class="nav-link" href="#">Sales</a>
@@ -176,7 +176,7 @@
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-chart-line"></i></i> Reports </a>
-								<div id="submenu-6" class="collapse submenu" style="">
+								<div id="submenu-6" class="collapse submenu">
 									<ul class="nav flex-column">
 										<li class="nav-item">
 											<a class="nav-link" href="#">Sales</a>

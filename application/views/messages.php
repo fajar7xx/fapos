@@ -17,5 +17,14 @@ elseif ($this->session->has_userdata('delete')) :
         </a>
     </div>
 <?php
+elseif ($this->session->has_userdata('error')) :
+    ?>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Error</strong> <?= $this->session->userdata('error'); ?>.
+        <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </a>
+    </div>
+<?php
 endif;
 ?>

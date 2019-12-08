@@ -22,13 +22,13 @@ kumpulkan link video tutorial yuk koding progress :
     ✔ video 18 Hanya 2 Menit CRUD Data Unit dengan CodeIgniter @done (11/21/2019, 11:14:44 PM)
     ✔ video 19 1 Menit Integrasi DataTable Client-side (CI + AdminLTE) @done (12/6/2019, 10:47:40 PM)
     ✔ video 20 Membuat Menu Active Sesuai yang Dipilih @done (12/7/2019, 6:59:32 AM)
-    ☐ video 21
-    ☐ video 22
-    ☐ video 23
-    ☐ video 24
-    ☐ video 25
-    ☐ video 26
-    ☐ video 26
+    ✔ video 21 Membuat Tabel Berelasi dengan 2 Tabel Lain @done (12/7/2019, 11:31:27 PM)
+    ✔ video 22 Tambah Data dengan Select Option dari Tabel Lain @done (12/8/2019, 9:53:25 AM)
+    ✔ video 23 Edit Data dengan Combobox Selected dari Tabel Lain @done (12/8/2019, 3:45:49 PM)
+    ✔ video 24 Kupas Tuntas Join SQL dengan Query Builder @done (12/8/2019, 3:51:48 PM)
+    ✔ video 25 Validasi Barcode Barang Unik dengan Custom Method CI @done (12/8/2019, 7:54:45 PM)
+    ✔ video 26 Membuat Upload Gambar / File dengan CodeIgniter @done (12/9/2019, 12:24:18 AM)
+    ✔ video 26 Edit Data CI dengan Replace Gambar Lama / Upload Gambar Baru @done (12/9/2019, 12:24:19 AM)
     ☐ video 27
     ☐ video 28
     ☐ video 29
@@ -39,6 +39,9 @@ kumpulkan link video tutorial yuk koding progress :
     ☐ video 34
     ☐ video 35
     ☐ video 36
+    ☐ video 37
+    ☐ video 37
+    ☐ video 3933
     
     keterangan :
         row di ekstrak satu baris
@@ -50,3 +53,6 @@ kumpulkan link video tutorial yuk koding progress :
     library hampir sama dengan controller dan model jadi pemanggilan harus sama dalam bentuk objek  dan tanpa menggunakan extends ci 
 
     pelajari lebih lanjut penggunaan Libraries dan helpers
+
+    bug :
+        ☐ ketika edit data gambar yang lama itu harus d hapus tapi malah tidak bisa d hapus pelajari pada video ke 27
