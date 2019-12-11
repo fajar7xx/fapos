@@ -60,3 +60,7 @@ $route['customers/add'] = 'customers/add';
 $route['customers/process'] = 'customers/process';
 $route['customers/edit/(:num)'] = 'customers/edit/$1';
 $route['customers/del/(:num)'] = 'customers/del/$1';
+
+// custom for stok
+$route['stock/in'] = 'stock/stock_in_data';
+$route['stock/in/add'] = 'stock/stock_in_add';

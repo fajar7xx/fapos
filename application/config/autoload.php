@@ -91,7 +91,7 @@ $autoload['drivers'] = array();
 */
 // jika punya fungsi custom silahkan buat d folder fungsi dengan nama fungsi_helper
 // tapi pemanggilannya cungkup fungsi ja
-$autoload['helper'] = array('url', 'fungsi', 'form', 'file');
+$autoload['helper'] = array('url', 'fungsi', 'form', 'file', 'directory');
 
 /*
 | -------------------------------------------------------------------

@@ -31,7 +31,7 @@
                         // print_r($users->result()); 
                         ?>
                         <div class="table-responsive p-2">
-                            <table class="table table-show table-hover">
+                            <table id="table-item" class="table table-hover">
                                 <thead class="bg-light">
                                     <tr class="border-0">
                                         <th class="border-0 text-center">#</th>
@@ -41,14 +41,15 @@
                                         <th class="border-0">Kategory</th>
                                         <th class="border-0">Unit</th>
                                         <th class="border-0">Harga</th>
+                                        <th class="border-0">Stok</th>
                                         <th class="border-0 text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    $no = 1;
-                                    foreach ($row->result() as $key => $data) :
-                                        ?>
+                                    <!-- <?php
+                                            $no = 1;
+                                            foreach ($row->result() as $key => $data) :
+                                                ?>
                                         <tr>
                                             <td class="text-center"><?= $no++; ?></td>
                                             <td>
@@ -71,6 +72,9 @@
                                             <td><?= rupiah($data->price); ?></td>
                                             </td>
                                             <td class="text-center">
+                                                <a href="<?= site_url('items/barcode_qrcode/' . $data->item_id); ?>" class="btn btn-info btn-xs" title="barcode generator">
+                                                    <i class="fas fa-barcode fa-fw"></i>
+                                                </a>
                                                 <a href="<?= site_url('items/edit/' . $data->item_id); ?>" class="btn btn-success btn-xs" title="Update">
                                                     <i class="fas fa-edit fa-fw"></i>
                                                 </a>
@@ -82,7 +86,7 @@
                                         </tr>
                                     <?php
                                     endforeach;
-                                    ?>
+                                    ?> -->
                                 </tbody>
                             </table>
                         </div>

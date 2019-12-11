@@ -29,19 +29,20 @@ kumpulkan link video tutorial yuk koding progress :
     ✔ video 25 Validasi Barcode Barang Unik dengan Custom Method CI @done (12/8/2019, 7:54:45 PM)
     ✔ video 26 Membuat Upload Gambar / File dengan CodeIgniter @done (12/9/2019, 12:24:18 AM)
     ✔ video 26 Edit Data CI dengan Replace Gambar Lama / Upload Gambar Baru @done (12/9/2019, 12:24:19 AM)
-    ☐ video 27
-    ☐ video 28
-    ☐ video 29
-    ☐ video 30
-    ☐ video 31
-    ☐ video 32
-    ☐ video 33
-    ☐ video 34
-    ☐ video 35
+    ✔ video 27 Edit Data CI dengan Replace Gambar Lama / Upload Gambar Baru @done (12/9/2019, 12:16:25 PM)
+    ✔ video 28 Hapus Data Sekaligus Gambar dan Custom Messages CodeIgniter @done (12/9/2019, 1:10:43 PM)
+    ✔ video 29 Membuat Barcode Generator di PHP @done (12/9/2019, 1:47:22 PM)
+    ✔ video 30 Membuat QR-Code Generator di CodeIgniter @done (12/10/2019, 11:00:44 AM)
+    ✔ video 31 Cetak Barcode di PDF dengan CodeIgniter + Dompdf @done (12/10/2019, 11:44:23 AM)
+    ✔ video 32 Print QR Code dengan Autoload Library DOMPDF + CodeIgniter @done (12/10/2019, 11:45:55 AM)
+    ✔ video 33 Implementasi DataTables Server-side di CodeIgniter dan Bootstrap @done (12/11/2019, 1:02:46 PM)
+    ✔ video 34 Desain Tabel DB dan Tampilan Form, Fitur Stock-in / Purchases @done (12/11/2019, 1:02:47 PM)
+    ☐ video 35 Load Product di Modal, Serta Select dan Set ke Form Inputan
     ☐ video 36
     ☐ video 37
-    ☐ video 37
-    ☐ video 3933
+    ☐ video 38
+    ☐ video 39
+    ☐ video 40
     
     keterangan :
         row di ekstrak satu baris
@@ -56,3 +57,4 @@ kumpulkan link video tutorial yuk koding progress :
 
     bug :
         ☐ ketika edit data gambar yang lama itu harus d hapus tapi malah tidak bisa d hapus pelajari pada video ke 27
+        ☐ tidak bisa hapus data menggunakan method delete_file bawaan codeigniter

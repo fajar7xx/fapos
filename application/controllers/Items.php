@@ -14,6 +14,43 @@ class Items extends CI_Controller
         ]);
     }
 
+    function get_ajax()
+    {
+        $list = $this->Items_model->get_datatables();
+        // $data = array();
+        $data = [];
+        $no = @$_POST['start'];
+        foreach ($list as $item) {
+            $no++;
+            // $row = array();
+            $row = [];
+            $row[] = $no . ".";
+            $row[] = $item->picture != null ? '<img src="' . base_url('images/products' . $item->picture) . '" class="img-fluid img-thumbnail" style="height: 50px; width: auto;">' : '<img src="' . base_url('images/product.png') . '" class="img-fluid img-thumbnail" style="height: 50px; width: auto;">';
+
+            $row[] = $item->barcode;
+            // '<br><a href="' . site_url('item/barcode_qrcode/' . $item->item_id) . '" class="btn btn-default btn-xs">Generate <i class="fa fa-barcode"></i></a>';
+
+            $row[] = $item->name_item;
+            $row[] = $item->category_name;
+            $row[] = $item->unit_name;
+            $row[] = rupiah($item->price);
+            $row[] = $item->stock;
+
+            // add html for action
+            $row[] = '<a href="' . site_url('items/barcode_qrcode/' . $item->item_id) . '" class="btn btn-info btn-xs mr-1" title="Barcode - Qrcode"><i class="fas fa-barcode fa-fw"></i></a><a href="' . site_url('items/edit/' . $item->item_id) . '" class="btn btn-primary btn-xs" title="Update"><i class="fas fa-edit fa-fw"></i></a>
+            <a href="' . site_url('items/del/' . $item->item_id) . '" onclick="return confirm(\'Yakin hapus data?\')"  class="btn btn-danger btn-xs" title="Delete"><i class="fas fa-trash fa-fw"></i></a>';
+            $data[] = $row;
+        }
+        $output = array(
+            "draw" => @$_POST['draw'],
+            "recordsTotal" => $this->Items_model->count_all(),
+            "recordsFiltered" => $this->Items_model->count_filtered(),
+            "data" => $data,
+        );
+        // output to json format
+        echo json_encode($output);
+    }
+
     public function index()
     {
         // $this->load->view('dashboard');
@@ -128,9 +165,21 @@ class Items extends CI_Controller
                         // replace gambar or file
                         $item = $this->Items_model->get($post['id'])->row();
                         if ($item->picture != NULL) {
-                            $target_file = './images/products/' . $item->picture;
-                            // delete_files($target_file);
-                            unlink($target_file);
+                            $target_file = '/fapos/images/products' . $item->picture;
+
+                            // var_dump($target_file);
+                            // die;
+
+                            delete_files($target_file, TRUE);
+                            // unlink($target_file);
+
+                            if (delete_files($target_file, TRUE)) {
+                                echo "berhasil di hapus";
+                                die;
+                            } else {
+                                echo "gagal dihapus";
+                                die;
+                            }
                         }
 
 
@@ -160,6 +209,16 @@ class Items extends CI_Controller
 
     public function del($id)
     {
+        $item = $this->Items_model->get($id)->row();
+        if ($item->picture != NULL) {
+            $target_file = '/fapos/images/products' . $item->picture;
+
+            // var_dump($target_file);
+            // die;
+
+            delete_files($target_file, TRUE);
+            // unlink($target_file);
+        }
         $this->Items_model->del($id);
         if ($this->db->affected_rows() > 0) {
             // echo "<script>alert('data berhasil dihapus')</script>";
@@ -167,5 +226,29 @@ class Items extends CI_Controller
         }
         // echo "<script>window.location='" . site_url('Items') . "'</script>";
         redirect('Items');
+    }
+
+    public function barcode_qrcode($id)
+    {
+        $data['row'] = $this->Items_model->get($id)->row();
+        $this->templates->load('template', 'products/items/barcode_qrcode.php', $data);
+
+
+        // $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
+        // echo $generator->getBarcode('1234567890', $generator::TYPE_CODE_128);
+    }
+
+    function print_barcode($id)
+    {
+        $data['row'] = $this->Items_model->get($id)->row();
+        $html = $this->load->view('products/items/barcode_print', $data, TRUE);
+        $this->fungsi->PdfGenerator($html, 'barcode-' . $data['row']->barcode, 'A4', 'potrait');
+    }
+
+    function print_qrcode($id)
+    {
+        $data['row'] = $this->Items_model->get($id)->row();
+        $html = $this->load->view('products/items/qrcode_print', $data, TRUE);
+        $this->fungsi->PdfGenerator($html, 'qrcode-' . $data['row']->barcode, 'A4', 'potrait');
     }
 }

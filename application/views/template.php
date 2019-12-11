@@ -253,6 +253,17 @@
 		$(document).ready(function() {
 			$('table.table-show').DataTable();
 		});
+		$(document).ready(function() {
+			$('#table-item').DataTable({
+				"processing": true,
+				"serverSide": true,
+				// "ajax": "scripts/server_processing.php"
+				"ajax": {
+					"url": "<?= site_url('items/get_ajax'); ?>",
+					"type": "POST"
+				}
+			});
+		});
 	</script>
 </body>
 
