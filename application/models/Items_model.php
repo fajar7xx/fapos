@@ -145,4 +145,24 @@ class Items_model extends CI_Model
         $query = $this->db->get();
         return $query;
     }
+
+    function update_stock_in($data)
+    {
+        $qty = $data['qty'];
+        $id = $data['item_id'];
+        $this->db
+            ->set('stock', 'stock' . '+' . $qty, false)
+            ->where('item_id', $id)
+            ->update('product_items');
+    }
+
+    function update_stock_out($data)
+    {
+        $qty = $data['qty'];
+        $id = $data['item_id'];
+        $this->db
+            ->set('stock', 'stock' . '-' . $qty, false)
+            ->where('item_id', $id)
+            ->update('product_items');
+    }
 }

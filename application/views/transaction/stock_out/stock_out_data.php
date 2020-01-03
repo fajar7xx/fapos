@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="page-header">
-                    <h2 class="pageheader-title">Stock </h2>
+                    <h2 class="pageheader-title">Stock Out</h2>
                     <hr>
                 </div>
             </div>
@@ -16,8 +16,8 @@
                 ?>
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="float-left">Data Stock</h5>
-                        <a href="<?= site_url('stock/in/add'); ?>" class="float-right btn btn-primary btn-sm">Tambah Stok</a>
+                        <h5 class="float-left">Data Stock Out </h5>
+                        <a href="<?= site_url('stock/out/add'); ?>" class="float-right btn btn-primary btn-sm">Tambah Stok</a>
                     </div>
                     <div class="card-body p-0">
                         <?php

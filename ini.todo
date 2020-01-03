@@ -37,12 +37,12 @@ kumpulkan link video tutorial yuk koding progress :
     ✔ video 32 Print QR Code dengan Autoload Library DOMPDF + CodeIgniter @done (12/10/2019, 11:45:55 AM)
     ✔ video 33 Implementasi DataTables Server-side di CodeIgniter dan Bootstrap @done (12/11/2019, 1:02:46 PM)
     ✔ video 34 Desain Tabel DB dan Tampilan Form, Fitur Stock-in / Purchases @done (12/11/2019, 1:02:47 PM)
-    ☐ video 35 Load Product di Modal, Serta Select dan Set ke Form Inputan
-    ☐ video 36
-    ☐ video 37
-    ☐ video 38
-    ☐ video 39
-    ☐ video 40
+    ✔ video 35 Load Product di Modal, Serta Select dan Set ke Form Inputan @done (12/17/2019, 8:32:41 PM)
+    ✔ video 36 Proses Stock-in (Menambah Stock Otomatis di Master Product) @done (12/17/2019, 11:43:55 PM)
+    ✔ video 37 Tampil Tabel History Stock-in dan Percantik Tampilan [37] @done (12/18/2019, 11:46:14 PM)
+    ✔ video 38 Proses Hapus Stock In (Mengurangi Stock Product Otomatis) [38] @done (12/19/2019, 10:53:23 PM)
+    ✔ video 39 {Bonus} Membuat Detail Data dengan Popup / Modal Bootstrap [39] @done (12/21/2019, 11:38:33 PM)
+    ✔ video 40 Pembuatan Fitur Stock-Out (Barang Keluar) [40-41] @done (12/22/2019, 12:09:53 AM)
     
     keterangan :
         row di ekstrak satu baris
@@ -58,3 +58,4 @@ kumpulkan link video tutorial yuk koding progress :
     bug :
         ☐ ketika edit data gambar yang lama itu harus d hapus tapi malah tidak bisa d hapus pelajari pada video ke 27
         ☐ tidak bisa hapus data menggunakan method delete_file bawaan codeigniter
+        ☐ pada form stock out validasi data qty tidak boleh melebihi data barang yang ada

@@ -6,7 +6,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="page-header">
                         <h2 class="pageheader-title">
-                            Stock In
+                            Stock out
                         </h2>
                         <hr>
                     </div>
@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h4 class="card-header">Keterangan Barang Masuk</h4>
+                            <h4 class="card-header">Keterangan Barang Keluar</h4>
                             <div class="card-body p-0">
                                 <div class="row">
                                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-6">
@@ -67,35 +67,23 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label class="col-12 col-sm-3 col-form-label text-sm-right" for="detail">detail<span class="text-danger">*</span></label>
+                                                <label class="col-12 col-sm-3 col-form-label text-sm-right" for="detail">info<span class="text-danger">*</span></label>
                                                 <div class="col-12 col-sm-8 col-lg-8">
                                                     <textarea name="detail" id="detail" cols="30" rows="5" class="form-control" placeholder="Kulakan/tambahan/etc"></textarea>
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label class="col-12 col-sm-3 col-form-label text-sm-right" for="supplier">supplier<span class="text-danger">*</span></label>
-                                                <div class="col-12 col-sm-8 col-lg-8">
-                                                    <select name="supplier" id="supplier" class="custom-select">
-                                                        <option value="">--pilih supplier --</option>
-                                                        <?php foreach ($suppliers as $i => $data) : ?>
-                                                            <option value="<?= $data->supplier_id; ?>"><?= $data->name; ?></option>
-                                                        <?php endforeach; ?>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row">
                                                 <label class="col-12 col-sm-3 col-form-label text-sm-right" for="qty">qty<span class="text-danger">*</span></label>
                                                 <div class="col-12 col-sm-8 col-lg-8">
-                                                    <input type="number" name="qty" id="qty" class="form-control" min="0" required>
+                                                    <input type="number" name="qty" id="qty" class="form-control" min="0" max= required>
                                                 </div>
                                             </div>
 
                                             <div class="form-group row text-right">
                                                 <div class="col col-sm-11 col-lg-11 offset-sm-1 offset-lg-0">
-                                                    <button type="submit" name="stok_masuk" class="btn btn-space btn-primary"> Submit</button>
-                                                    <a href="<?= site_url('stock/in/'); ?>" class="btn btn-space btn-secondary">Cancel</a>
+                                                    <button type="submit" name="stok_keluar" class="btn btn-space btn-primary"> Submit</button>
+                                                    <a href="<?= site_url('stock/out/'); ?>" class="btn btn-space btn-secondary">Cancel</a>
                                                 </div>
                                             </div>
                                         </form>

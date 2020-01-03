@@ -159,17 +159,17 @@
 								</div>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-shopping-cart"></i>Transactions</a>
+								<a class="nav-link <?= $this->uri->segment(1) == 'stock' ? 'active' : ''; ?>" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-shopping-cart"></i>Transactions</a>
 								<div id="submenu-5" class="collapse submenu">
 									<ul class="nav flex-column">
 										<li class="nav-item">
 											<a class="nav-link" href="#">Sales</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Stock IN</a>
+											<a class="nav-link" href="<?= site_url('stock/in'); ?>">Stock In</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Stock Out</a>
+											<a class="nav-link" href="<?= site_url('stock/out'); ?>">Stock Out</a>
 										</li>
 									</ul>
 								</div>
@@ -262,6 +262,48 @@
 					"url": "<?= site_url('items/get_ajax'); ?>",
 					"type": "POST"
 				}
+			});
+		});
+
+		$(document).ready(function() {
+			$(document).on('click', '#select', function() {
+				var item_id = $(this).data('id');
+				var barcode = $(this).data('barcode');
+				var item_name = $(this).data('name');
+				var unit = $(this).data('unit');
+				var stock = $(this).data('stock');
+
+				// isi value inputannya
+				$('#item_id').val(item_id);
+				$('#barcode').val(barcode);
+				$('#item').val(item_name);
+				$('#unit').val(unit);
+				$('#stok').val(stock);
+
+				// setelah selesai sembunyikan modal item
+				$('#modal-item').modal('hide');
+			});
+		});
+
+		$(document).ready(function() {
+			$(document).on('click', '#detailbuttonmodal', function() {
+				var barcode = $(this).data('barcode');
+				var item_name = $(this).data('itemname');
+				var supplier =$(this).data('suppliername');
+				var qty = $(this).data('qty');
+				var date = $(this).data('date');
+				var detail = $(this).data('detail');
+
+				// isi value inputannya
+				$('#barcode').text(barcode);
+				$('#itemName').text(item_name);
+				$('#supplier').text(supplier);
+				$('#qty').text(qty);
+				$('#date').text(date);
+				$('#detail').text(detail);
+
+				// setelah selesai sembunyikan modal item
+				// $('#modal-item').modal('hide');
 			});
 		});
 	</script>
